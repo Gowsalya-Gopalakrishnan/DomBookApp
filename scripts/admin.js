@@ -53,6 +53,8 @@ function displaydata(arr){
         let borrowedDays =  document.createElement("h4");
         borrowedDays.textContent = `Borrowed Status : ${el.borrowedDays}`;
 
+        let img = document.createElement("img");
+        img.src= `https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg`;
         let verifybtn = document.createElement("button");
         verifybtn.textContent = "Verify Book";
         verifybtn.addEventListener("click",function(){
