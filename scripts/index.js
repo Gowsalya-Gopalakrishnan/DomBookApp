@@ -6,7 +6,7 @@ form.addEventListener("submit",function(){
 
     let obj = {email,password};
     if(email === "admin@empher.com" && password === "empher@123"){
-        localStorage.setItem("loginData",email)
+        localStorage.setItem("loginData",obj)
         // localStorage.setItem("loginData",password)
         alert("Logged in as Admin.");
         form.reset();
@@ -21,6 +21,15 @@ form.addEventListener("submit",function(){
         alert("something went wrong pleaser try again later");
         form.reset();
     }
+
+    let localdata = localStorage.getItem("loginData");
+    if(localdata == "" || localdata != "admin@empher.com"){
+        alert("Admin Not Logged In.");
+        window.location,href= "index.html";
+        form.reset();
+    }
+
+    
 
     
 })
